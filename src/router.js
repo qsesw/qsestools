@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/tool/:type',
       name: 'tool',
-      component: () => import('./views/Tool.vue')
+      component: () => import('@/views/Tool.vue')
     }
   ]
 })

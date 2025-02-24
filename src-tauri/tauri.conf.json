@@ -1,11 +1,11 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
-  "identifier": "com.qses.tools",
-  "productName": "qsestools",
+  "identifier": "top.qsesvick.tools",
+  "productName": "七十二时.的工具箱",
   "version": "0.1.0",
   "build": {
     "frontendDist": "../dist",
-    "devUrl": "http://localhost:3000",
+    "devUrl": "http://localhost:5176",
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build"
   },
@@ -17,7 +17,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "qsestools",
+        "title": "七十二时.的工具箱",
         "width": 800,
         "height": 600,
         "resizable": true,
@@ -37,6 +37,20 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "resources": [],
+    "copyright": "© 2025 七十二时.",
+    "category": "Utility",
+    "shortDescription": "七十二时.的工具箱",
+    "longDescription": "一个工具集合。",
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "",
+      "wix": {
+        "language": "zh-CN",
+        "template": "wix/main.wxs"
+      }
+    }
   }
 }

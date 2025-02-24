@@ -66,12 +66,17 @@ const navigateToTool = (key) => router.push(`/tool/${key}`)
 .tool-card {
   background: #ffffff;
   border: 1px solid #e5e5e5;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.3, 0, 0.2, 1);
+  margin: 8px;
+  padding: 0;
+  border-radius: 12px;
+  overflow: visible;
 }
 
 .tool-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: -5 12px 24px rgba(0, 0, 0, 0.06);
+  margin: 8px;
 }
 
 .tool-icon {
@@ -79,7 +84,7 @@ const navigateToTool = (key) => router.push(`/tool/${key}`)
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px 6px 0 0;
+  border-radius: 12px 12px 0 0;
   opacity: 0.9;
 }
 
