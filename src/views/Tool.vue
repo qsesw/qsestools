@@ -20,18 +20,30 @@
               <n-space vertical>
                 <n-text>获取第五人格游戏的官方应用。</n-text>
                 <n-space wrap :size="12">
-                  <n-button type="primary" tag="a" href="https://adl.netease.com/d/g/id5/c/gbpc" target="_blank">
-                    官服PC端
-                  </n-button>
-                  <n-button type="success" tag="a" href="https://adl.netease.com/d/g/id5/c/gw?type=android" target="_blank">
-                    官服Android端
-                  </n-button>
-                  <n-button type="info" tag="a" href="https://adl.netease.com/d/g/id5/c/gw?type=ios" target="_blank">
-                    官服iOS端
-                  </n-button>
-                  <n-button type="warning" tag="a" href="https://app.mi.com/details?id=com.netease.dwrg.mi" target="_blank">
-                    小米服Android端
-                  </n-button>
+                  <download-button
+                    type="primary"
+                    url="https://adl.netease.com/d/g/id5/c/gbpc"
+                    text="官服PC端"
+                    filename="identity_v_pc.exe"
+                  />
+                  <download-button
+                    type="success"
+                    url="https://adl.netease.com/d/g/id5/c/gw?type=android"
+                    text="官服Android端"
+                    filename="identity_v_android.apk"
+                  />
+                  <download-button
+                    type="info"
+                    url="https://adl.netease.com/d/g/id5/c/gw?type=ios"
+                    text="官服iOS端"
+                    filename="identity_v_ios.ipa"
+                  />
+                  <download-button
+                    type="warning"
+                    url="https://app.mi.com/details?id=com.netease.dwrg.mi"
+                    text="小米服Android端"
+                    filename="identity_v_mi.apk"
+                  />
                 </n-space>
               </n-space>
             </n-card>
@@ -60,6 +72,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { NCard, NText, NTag, NEmpty, NButton, NSpace, NGrid, NGridItem } from 'naive-ui'
 import { getToolByKey } from '../config/tools'
+import DownloadButton from '../components/DownloadButton.vue'
 
 const route = useRoute()
 const currentTool = computed(() => getToolByKey(route.params.type))
