@@ -2,7 +2,7 @@
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "identifier": "top.qsesvick.tools",
   "productName": "七十二时.的工具箱",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:5176",
