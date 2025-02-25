@@ -4,6 +4,7 @@ import router from './router'
 import { NIcon } from 'naive-ui'
 import { createPinia } from 'pinia'
 import naive from 'naive-ui'
+import './assets/index.css'
 
 const app = createApp(App)
 const pinia = createPinia()

@@ -41,16 +41,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-import {
-  NGrid,
-  NGridItem,
-  NCard,
-  NText,
-  NTag,
-  NButton,
-  NSpace,
-  NIcon
-} from 'naive-ui'
+import { NGrid, NGridItem, NCard, NText, NTag, NButton, NSpace, NIcon } from 'naive-ui'
 import { tools } from '../config/tools'
 
 const router = useRouter()
@@ -59,24 +50,26 @@ const navigateToTool = (key) => router.push(`/tool/${key}`)
 
 <style scoped>
 .home {
-  max-width: 1200px;
+  width: 95%;
   margin: 0 auto;
 }
 
 .tool-card {
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(229, 229, 229, 0.5);
   transition: all 0.4s cubic-bezier(0.3, 0, 0.2, 1);
   margin: 8px;
   padding: 0;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: visible;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .tool-card:hover {
   transform: translateY(-4px);
-  box-shadow: -5 12px 24px rgba(0, 0, 0, 0.06);
-  margin: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .tool-icon {
@@ -84,8 +77,13 @@ const navigateToTool = (key) => router.push(`/tool/${key}`)
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px 12px 0 0;
-  opacity: 0.9;
+  border-radius: 16px 16px 0 0;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+.tool-icon:hover {
+  opacity: 1;
 }
 
 .custom-icon {
@@ -105,4 +103,17 @@ const navigateToTool = (key) => router.push(`/tool/${key}`)
   font-size: 1.1rem;
   font-weight: 600;
 }
+:deep(.n-tag) {
+  padding: 2px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+:deep(.n-button) {
+  border-radius: 10px;
+}
+:deep(.n-button__content) {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 </style>

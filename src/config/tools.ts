@@ -6,7 +6,7 @@ export const tools: Tool[] = [
     title: '第五人格「国服」',
     description: '第五人格「国服」游戏相关工具和资源',
     category: '游戏工具',
-    color: '#87a2b4',
+    color: '#4a6a7e',
     icon: null,
     features: [
       {
