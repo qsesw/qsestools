@@ -46,16 +46,21 @@ export const tools: Tool[] = [
       {
         key: 'pc-login',
         title: 'PC端账号登录工具',
-        description: 'PC端账号登录工具，帮助您快速登录游戏账号。',
+        description: 'PC端账号登录工具，帮助您快速登录游戏账号，绕过账号登录限制。',
         status: 'third-party',
-        actionText: '资源准备中',
-        enabled: false,
+        enabled: true,
         buttons: [
           {
-            text: '资源准备中',
-            link: 'https://adl.netease.com/d/g/id5/c/gbpc',
-            color: '#f0a020',
-            enabled: false
+            text: '说明及使用教程',
+            link: 'https://qsesvick.top/identityv-login/',
+            color: '#18a058',
+            enabled: true
+          },
+          {
+            text: '工具下载',
+            link: 'https://alist.20237737.xyz/Comprehensive/Windows%E8%B5%84%E6%BA%90/%E6%B8%B8%E6%88%8F/%E7%AC%AC%E4%BA%94%E4%BA%BA%E6%A0%BC/%E7%AC%AC%E4%BA%94%E4%BA%BA%E6%A0%BC%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95%E5%B7%A5%E5%85%B7',
+            color: '#2080f0',
+            enabled: true
           }
         ]
       }

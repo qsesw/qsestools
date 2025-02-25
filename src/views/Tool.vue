@@ -38,10 +38,10 @@
                     :key="button.text"
                     type="primary"
                     :color="button.color"
-                    :disabled="!feature.enabled || feature.status === 'developing'"
+                    :disabled="!feature.enabled || !button.enabled || feature.status === 'developing'"
                     @click="() => {
-                      if (button.link) {
-                        window?.open(button.link, '_blank', 'noopener,noreferrer')
+                      if (button.link && button.enabled) {
+                        open(button.link)
                       }
                     }"
                   >
@@ -52,7 +52,7 @@
                   v-else
                   type="primary"
                   :disabled="!feature.enabled || feature.status === 'developing'"
-                  @click="() => feature.link && window.open(feature.link, '_blank')"
+                  @click="() => feature.link && feature.enabled && open(feature.link)"
                 >
                   {{ feature.actionText }}
                 </n-button>
@@ -76,6 +76,10 @@ import { getToolByKey } from '../config/tools'
 const route = useRoute()
 const router = useRouter()
 const currentTool = computed(() => getToolByKey(route.params.type))
+
+const open = (url) => {
+  window.open(url, '_blank')
+}
 </script>
 
 <style scoped>

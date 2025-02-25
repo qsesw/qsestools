@@ -5,7 +5,12 @@ import { resolve } from 'path'
 export default defineConfig({
   optimizeDeps: {
     include: [
-      '@tauri-apps/api'
+      '@tauri-apps/api',
+      '@tauri-apps/api/shell',
+      '@tauri-apps/api/window',
+      '@tauri-apps/api/path',
+      '@tauri-apps/api/fs',
+      '@tauri-apps/api/dialog'
     ]
   },
   plugins: [vue()],
